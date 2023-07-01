@@ -25,33 +25,51 @@
                     <option value="red">Rojo</option>
                     <option value="green">Verde</option>
                     <option value="purple">Violeta</option>
-                  </select>
-                  <div class="d-flex mt-3">
+                </select>
+                <div class="d-flex mt-3">
                     <label for="basic-url" class="form-label text-white">Precio unitario: $</label>
                     <p id="valor"> 149.000 </p>
-                  </div>
-                  <button type="button" class="btn btn-primary" onclick="
-                               elemento1 = document.querySelector('#basic-url')
-                               cantidad = Number(elemento1.value)
-                               precio = document.querySelector('#valor')
-                               sinPuntos = precio.innerHTML.replace('.', '')
-                               total = cantidad * Number(sinPuntos)
-                               elemento2 = document.querySelector('#total')
-                               elemento2.innerHTML = 'Total: $' + total.toLocaleString('es-ES')
-                               elemento4 = document.querySelector('#cantidad_total')
-                               elemento4.innerHTML = 'Cantidad: ' + elemento1.value
-                               elemento5 = document.querySelector('select')
-                               circulo = document.querySelector('#circulo')
-                               circulo.style.backgroundColor = elemento5.value
-                  ">Calcula total</button>
+                </div>
+                <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" onclick="
+                           var elemento1 = document.querySelector('#basic-url')
+                           var elemento5 = document.querySelector('select')
+                            if(elemento1.value > 0)
+                            {
+                               if(elemento5.value !== 'Seleccione color')
+                               {
+                                    console.log(elemento5.value)
+                                    var cantidad = Number(elemento1.value)
+                                    var precio = document.querySelector('#valor')
+                                    var sinPuntos = precio.innerHTML.replace('.', '')
+                                    var total = cantidad * Number(sinPuntos)
+                                    var elemento2 = document.querySelector('#total')
+                                    elemento2.innerHTML = 'Total: $' + total.toLocaleString('es-ES')
+                                    elemento2.style.fontSize = '30px'
+                                    var elemento4 = document.querySelector('#cantidad_total')
+                                    elemento4.innerHTML = 'Cantidad: ' + elemento1.value
+                                    var circulo = document.querySelector('#circulo')
+                                    circulo.style.backgroundColor = elemento5.value
+                               }
+                               else 
+                               {
+                                alert('Selecciona un color')
+                               }
+                            }
+                            else{
+                                alert('Ingresa número mayor a 0')
+                            }
+                            
+                ">Calcula total</button>
+                </div>
             </div>
         </div>
         <div class="resultado d-flex flex-column ms-5">
             <label for="basic-url" id="total" class="form-label text-white">Total:</label>
             <label for="basic-url" id="cantidad_total" class="form-label text-white">Cantidad Total: </label>
             <div class=" d-flex">
-                <label for="basic-url" class="form-label text-white">Color:</label>
-                <div id="circulo" class="color ms-2"></div>
+                <label id="color" for="basic-url" class="form-label text-white">Color:</label>
+                <div id="circulo" class="ms-2 mt-2"></div>
             </div>
         </div>
     </div>

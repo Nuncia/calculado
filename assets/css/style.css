@@ -7,13 +7,26 @@ img{
     width: 100%;
 }
 
-.color{
+#circulo{
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    background-color: blueviolet;
+    background-color: white;
+    font-size: 30px;
 }
 
 .container{
     min-height: 100vh;
+}
+
+#total{
+    font-size: 30px;
+}
+
+#cantidad_total{
+    font-size: 30px;
+}
+
+#color{
+    font-size: 30px;
 }
