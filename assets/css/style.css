@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    min-height: 100vh;
+}
+
+img{
+    width: 100%;
+}
+
+.color{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: blueviolet;
+}
+
+.container{
+    min-height: 100vh;
+}
