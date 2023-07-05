@@ -14,7 +14,7 @@
         <div class="card text-white bg-dark mb-3 d-flex justify-content-center align-items-center" style="max-width: 18rem;">
             <img src="./assets/imgs/pramod-tiwari-3IBt5dWClv4-unsplash.jpg" alt="">
             <div class="card-body">
-              <h5 class="card-title">Cartera Burberry</h5>
+              <h5 class="card-title">Asus 300 Gamer Negro</h5>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3">Cantidad: </span>
                     <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -32,22 +32,22 @@
                 </div>
                 <div class="d-flex justify-content-center">
                 <button type="button" class="btn btn-primary" onclick="
-                           var elemento1 = document.querySelector('#basic-url')
-                           var elemento5 = document.querySelector('select')
+                           let elemento1 = document.querySelector('#basic-url')
+                           let elemento5 = document.querySelector('select')
                             if(elemento1.value > 0)
                             {
                                if(elemento5.value !== 'Seleccione color')
                                {
-                                    var cantidad = Number(elemento1.value)
-                                    var precio = document.querySelector('#valor')
-                                    var sinPuntos = precio.innerHTML.replace('.', '')
-                                    var total = cantidad * Number(sinPuntos)
-                                    var elemento2 = document.querySelector('#total')
+                                    let cantidad = Number(elemento1.value)
+                                    let precio = document.querySelector('#valor')
+                                    let sinPuntos = precio.innerHTML.replace('.', '')
+                                    let total = cantidad * Number(sinPuntos)
+                                    let elemento2 = document.querySelector('#total')
                                     elemento2.innerHTML = 'Total: $' + total.toLocaleString('es-ES')
                                     elemento2.style.fontSize = '30px'
-                                    var elemento4 = document.querySelector('#cantidad_total')
+                                    let elemento4 = document.querySelector('#cantidad_total')
                                     elemento4.innerHTML = 'Cantidad: ' + elemento1.value
-                                    var circulo = document.querySelector('#circulo')
+                                    let circulo = document.querySelector('#circulo')
                                     circulo.style.backgroundColor = elemento5.value
                                }
                                else 
@@ -56,7 +56,7 @@
                                }
                             }
                             else{
-                                alert('Ingresa número mayor a 0')
+                                alert('Ingresa un número mayor a 0')
                             }
                             
                 ">Calcula total</button>
